@@ -1,0 +1,42 @@
+body{
+    background-color: #F3F5FC; ;
+}
+
+header{
+    background-color: #bbc3df;   
+}
+
+.header{
+    background-color: aqua;
+    width: 80%;
+    margin: auto;
+}
+
+.logo{
+     margin-top: 40px;
+    /*margin-left: 40px; */
+}
+
+.main{
+    background-color: chocolate;
+    width: 85%;
+    margin: auto 40% auto auto;
+    display: flex;
+    /* display: grid;
+    grid-template-columns: 2fr 1fr; */
+}
+
+.left{
+ background-color: bisque;
+ /* width: 50%;  */
+}
+
+.rigth{
+    background-color: burlywood;
+}
+
+@media screen and (max-width: 770px){
+    .main{
+        grid-template-columns: 1fr;
+    }
+}

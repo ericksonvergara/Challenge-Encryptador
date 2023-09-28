@@ -19,13 +19,14 @@
     <main>
         <div class="main">
             <div class="left">
-                <textarea class="text" name="" id="message" placeholder="Ingrese el texto aqui"></textarea>
-    
-                <img src="./Images/exclamationMark.svg" alt="">
-                <p>Solo letras minúsculas y sin acentos</p>
-    
+                <textarea class="text" name="" id="message" placeholder="Ingrese el texto aqui" autofocus></textarea>
+                <span>
+                    <img src="./Images/exclamationMark.svg" alt="">
+                    Solo letras minúsculas y sin acentos
+                </span>
+
                 <button type="button" onclick="encrypt(document.getElementById('message').value)">encriptar</button>
-    
+
                 <button type="button" onclick="bycript(document.getElementById('message').value)">Desencriptar</button>
             </div>
             <div class="rigth">
@@ -38,4 +39,5 @@
         <textarea class="text" name="" id="response" cols="30" rows="10"></textarea>
     </main>
 </body>
+
 </html>

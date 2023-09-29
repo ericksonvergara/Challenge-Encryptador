@@ -20,14 +20,16 @@
         <div class="main">
             <div class="left">
                 <textarea class="text" name="" id="message" placeholder="Ingrese el texto aqui" autofocus></textarea>
-                <span>
-                    <img src="./Images/exclamationMark.svg" alt="">
-                    Solo letras minúsculas y sin acentos
-                </span>
-
-                <button type="button" onclick="encrypt(document.getElementById('message').value)">encriptar</button>
-
-                <button type="button" onclick="bycript(document.getElementById('message').value)">Desencriptar</button>
+                <div class="footer_left">
+                    <span>
+                        <img src="./Images/exclamationMark.svg" alt="">
+                        Solo letras minúsculas y sin acentos
+                    </span>
+    
+                    <button type="button" onclick="encrypt(document.getElementById('message').value)">encriptar</button>
+    
+                    <button type="button" onclick="bycript(document.getElementById('message').value)">Desencriptar</button>
+                </div>                
             </div>
             <div class="rigth">
                 <img src="./Images/picture.svg" alt="">

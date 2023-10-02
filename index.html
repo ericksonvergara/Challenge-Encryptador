@@ -7,7 +7,11 @@
     <title>Encriptador</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <script src="./js/logica.js"></script>
+
 </head>
 
 <body>
@@ -19,7 +23,8 @@
     <main>
         <div class="main">
             <div class="left">
-                <textarea class="text" name="" id="message" placeholder="Ingrese el texto aqui" autofocus></textarea>
+                <textarea class="text" name="" id="message" placeholder="Ingrese el texto aqui" autofocus
+                    onkeypress="validateToLowerCase  (event)"></textarea>
                 <div class="footer_left">
                     <img src="./Images/exclamationMark.svg" alt="">
                     <span class="conditions">Solo letras minúsculas y sin acentos</span>
@@ -34,14 +39,19 @@
             </div>
 
             <!-- Elementos de la derecha -->
-            <div class="rigth"> 
-                <img class="picture" src="./Images/picture.svg" alt="">
-                <p class="finalMessage">Ningún mensaje fue encontrado</p>
-                <p class="warningMessage">Ingresa el texto que desees encriptar o desencriptar.</p>
-                <button class="copyButton hidden">Copiar</button>
+            <div class="rigth adjust">
+                <div id="messageInit" class="">
+                    <img class="picture" src="./Images/picture.svg" alt="">
+                    <p class="finalMessage adjust">Ningún mensaje fue encontrado</p>
+                    <p class="warningMessage">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+                <div id="messageResponse" class="hidden">
+                    <textarea class="text" name="" id="response" cols="30" rows="10"></textarea>
+                    <button type="button" class="copyButton"
+                        onclick="copyClipboard(document.getElementById('response').value)">Copiar</button>
+                </div>
             </div>
         </div>
-        <textarea class="text" name="" id="response" cols="30" rows="10"></textarea>
     </main>
 </body>
 

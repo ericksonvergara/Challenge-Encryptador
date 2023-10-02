@@ -21,7 +21,8 @@ let values = [
     }
 ];
 
-function encrypt(message){    
+function encrypt(message){
+    imageHidden();    
     for (let i = 0; i < values.length; i++) {
         message = message.replace(new RegExp(values[i].letra, 'g'), values[i].encrypt);
     }
@@ -34,3 +35,34 @@ function bycript(message){
     }
     document.getElementById('response').value = message;
 }
+
+function validateToLowerCase(event) {
+    let keyCode = event.keyCode || event.which;
+    if ((keyCode < 97 || keyCode > 122) && keyCode !== 32) {
+        event.preventDefault();
+    }
+}
+
+function copyClipboard(message) {
+    navigator.clipboard.writeText(message)
+        .then(() => {
+            console.log("Texto copiado al portapapeles");
+        })
+        .catch(err => {
+            console.error("Error al copiar al portapapeles");
+        });
+}
+
+function imageHidden() {
+    let image = document.getElementById('messageInit');
+    let message = document.getElementById('messageResponse');
+
+    if (!image.classList.contains('hidden')) {
+        image.classList.add('hidden');
+    }
+
+    if (message.classList.contains('hidden')) {
+        message.classList.remove('hidden');
+    }
+}
+

@@ -8,9 +8,10 @@ body{
     background-color: var(--color-fondo);
 }
 
-.header{
-    width: 90%;
-    margin: auto;
+header{
+    background-color: antiquewhite;
+    /* width: 90%;
+    margin: auto; */
      
 }
 
@@ -26,11 +27,11 @@ body{
 
 .main{
     background-color: chocolate;
-    width: 85%;
-    margin: auto 40% auto auto;
+    width: 80.5%;
+    margin: auto 40px auto auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    min-height: calc(100hv - 91px - 72px);
+    min-height: calc(100vh - 91px - 72px);
     align-items: end;
 }
 
@@ -50,6 +51,10 @@ body{
     background: none;
     border: none;
     outline: none;
+}
+
+.text::placeholder{
+    color: var(--color-blue);
 }
 
 .footer_left{
@@ -84,9 +89,7 @@ body{
     color: var(--color-blue);    
 }
 
-.text::placeholder{
-    color: var(--color-blue);
-}
+
 
 .rigth{
     background-color: rgb(255, 255, 255);
